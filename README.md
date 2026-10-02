@@ -51,6 +51,16 @@ The application requires the following environment variables (defined in `.env.e
 - `VITE_FIREBASE_MEASUREMENT_ID`: Firebase Measurement ID
 - `VITE_FIREBASE_OAUTH_CLIENT_ID`: Google OAuth Client ID
 
+## Firebase Setup
+
+To prevent `auth/unauthorized-domain` errors in production, you must whitelist your Vercel domain in Firebase:
+1. Go to the [Firebase Console](https://console.firebase.google.com/).
+2. Select your project (`gen-lang-client-0699091087`).
+3. Click on **Authentication** in the left sidebar.
+4. Go to the **Settings** tab.
+5. Click on **Authorized domains**.
+6. Click **Add domain** and enter your Vercel production URL (e.g., `sheetscan-xxx.vercel.app`). Do not include `https://`.
+
 ## Google Cloud Setup
 
 To run this application, you must configure a project in the Google Cloud Console with the following:
